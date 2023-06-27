@@ -1,0 +1,24 @@
+.footer {
+    width: 1440px;
+    height: 210px;
+    background-color: black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-img {
+        color: white;
+        height: 40px;
+        padding-top: 40px;
+
+    }
+
+    & p {
+        color: white;
+        padding-top: 25px;
+        font-size: 24px;
+
+    }
+}

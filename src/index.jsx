@@ -1,23 +1,30 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Header from './components/Header'
-import Error from './components/Error'
-import Home from './pages/Home'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
+import Header from './components/Header/header';
+import Error from './components/Error/error';
+import Home from './pages/Home/home';
+import About from './pages/A-Propos/a-propos';
+
+const GlobalStyle = createGlobalStyle`
+  div {
+    font-family: Montserrat;
+    margin: auto;
+  }
+`;
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <GlobalStyle />
       <Header />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="*" element={<Error />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Error />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
-)
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+);

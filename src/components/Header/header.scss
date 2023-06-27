@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    width: 1440px;
+    height: 68px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 720px;
+
+    &-img {
+        height: 50px;
+    }
+
+    &-nav {
+        width: 200px;
+
+        a {
+            padding-left: 25px; 
+            color: #FF6060;
+            text-decoration: none;
+            font-size: 24px;
+            font-family: Montserrat;
+            
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+               
+            }
+        }  
+    }
+}
