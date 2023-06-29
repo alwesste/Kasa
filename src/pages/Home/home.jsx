@@ -1,16 +1,23 @@
-import Banner from "../../components/Banner/banner.jsx"
-import Footer from "../../components/Footer/footer.jsx"
-import "./home.scss"
+import Banner from "../../components/Banner/banner.jsx";
+import Cards from "../../components/Cards/cards.jsx";
+import "./home.scss";
 
 function Home() {
-    return (
-        <div className="home">
-            <Banner />
-            <Footer />
-            <h1>Ceci est le Home</h1>
-        </div>
-    )
+
+
+  return (
+    <div className="home">
+      <Banner />
+      <div className="home-support">
+        <Cards/>
+        <Cards/>
+        <Cards/>
+        <Cards/>
+        <Cards/>
+        <Cards/>
+      </div>
+    </div>
+  );
 }
 
-export default Home
-
+export default Home;

@@ -1,0 +1,39 @@
+
+.card {
+    height: 340px;
+    width: 340px;
+    border-radius: 10px;
+    background: linear-gradient(0deg, hsla(22, 32%, 48%, 1) 0%, hsla(5, 64%, 47%, 1) 60%, hsla(2, 78%, 62%, 1) 100%);
+    margin: 20px;
+    margin-top: 35px;
+    
+    &:hover {   
+        cursor: pointer;
+     }
+    
+    &-title {
+        color: white;
+        font-size: 18px;
+        position: relative;
+        top: 280px;
+        left: 20px;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .card {
+        width: 335px;
+        height: 255px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+        &-title {
+            position: relative;
+            top: 200px;
+            text-decoration: none;
+        }
+    }
+}
+

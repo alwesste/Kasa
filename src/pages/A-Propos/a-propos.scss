@@ -1,0 +1,31 @@
+.about {
+    display: flex;
+    justify-content: center;
+    &-img {
+        height: 210px;
+        width: 1240px;
+        object-fit: cover;
+        border-radius: 25px;
+        filter: brightness(0.85);
+        margin-bottom: 30px;
+
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    } 
+}
+
+.special {
+    width: 1999px;
+}
+
+@media screen and (max-width: 750px) {
+    .about {
+        margin: 25px;
+        
+    }
+}

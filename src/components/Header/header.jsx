@@ -8,7 +8,7 @@ function Header() {
         <div className='header'>
             <img src={kasaLogo} alt="logo de la societe kasa" className='header-img'></img>
             <nav className='header-nav'>
-            <Link to="/">Home</Link>
+            <Link to="/">Accueil</Link>
             <Link to="/about">A Propos</Link>
             </nav>
         </div>

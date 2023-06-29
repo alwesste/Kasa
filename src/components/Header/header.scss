@@ -1,24 +1,26 @@
 .header {
     display: flex;
-    width: 1440px;
+    width: 1240px;
     height: 68px;
     justify-content: space-between;
     align-items: center;
     gap: 720px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    margin: auto;
 
     &-img {
         height: 50px;
     }
 
     &-nav {
-        width: 200px;
+        width: 300px;
 
         a {
-            padding-left: 25px; 
+            margin-left: 45px; 
             color: #FF6060;
             text-decoration: none;
             font-size: 24px;
-            font-family: Montserrat;
             
             &:hover {
                 cursor: pointer;
@@ -26,5 +28,27 @@
                
             }
         }  
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .header {
+        width: 85vw;
+        gap: 0px;
+        padding-bottom: 10px;
+
+        &-img {
+            height: 30px;
+        }
+
+        &-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 210px;
+
+            a {
+                font-size: 16px;
+            }
+        }
     }
 }
