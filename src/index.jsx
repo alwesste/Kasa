@@ -6,7 +6,7 @@ import Layout from './components/Layout/layout';
 import Error from './components/Error/error';
 import Home from './pages/Home/home';
 import About from './pages/A-Propos/a-propos';
-import Logement from './pages/Fiche-Logments/logement'
+import Logement from './pages/Fiche-Logements/logement'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -25,7 +25,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error />} />
-          <Route path="/logement" element={<Logement />}></Route>
+          <Route path="/logement" element={<Logement />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
