@@ -2,14 +2,16 @@ import "./cards.scss"
 import { Link } from "react-router-dom";
 
 
-const Cards = () => {
+const Cards = ({ title, cover, id }) => {
+    
 
     return  (     
         <div> 
-            <Link to="/logement">
+            <Link to={`/logement/${id}`}>
                 <div className="card">
+                    <img className="card-img" src={cover} alt="interieur de maison" />
                     <p className="card-title">
-                        Titre de la <br /> location
+                        {title}
                     </p>
                 </div>
             </Link>

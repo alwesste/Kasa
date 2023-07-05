@@ -1,12 +1,11 @@
-import bannerPhoto from '../../assets/photos/photo1.png'
 import "./banner.scss"
  
 
-function Banner() {
+function Banner({src, title}) {
     return (
         <div className='banner'>
-            <img src={bannerPhoto} alt="paysage avec vue sur la mer" className='banner-img'/>
-            <p className='banner-title'>Chez vous, partout et ailleurs</p>
+            <img src={src} alt="paysage avec vue sur la mer" className='banner-img'/>
+            {title && <p className='banner-title'>{title}</p>}
         </div>
     )
 }
