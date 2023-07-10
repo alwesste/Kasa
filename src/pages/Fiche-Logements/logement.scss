@@ -20,6 +20,15 @@
         justify-content: space-between;       
         width: 1240px;
         margin-bottom: 30px;
+        list-style-type: none;
+
+    }
+
+    &-count {
+        font-size: 20px;
+        color: white;
+        position: relative;
+        bottom: 40px;
     }
 
     .fa-solid {
@@ -68,19 +77,18 @@
             left: 500px;
             font-size: larger;
         }
-    }
-                     
+    }                  
 }
-
 
 .flat {
     width: 1240px;
     color: #FF6060;
-    margin: auto;
+    margin: 0 100px 0 100px;
 
     &-mix {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 30px;
     }
 
 
@@ -128,14 +136,24 @@
 }
 
 .profil {
-    display: flex;
-    justify-content: baseline;
-
-    & p {
-        font-size: 22px;
-        margin: 40px 20px 0 0;
+    margin-top: 20px;
+    
+    &-mini {
+        display: flex;
+        justify-content: baseline; 
     }
+    
+    &-img {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        & p {
+            font-size: 22px;
+            margin: 40px 20px 0 0;
+        }
 }
+
 
 .rotate-180 {
     transform: rotate(180deg);
@@ -156,7 +174,9 @@
         }
 
         &-lists {
+            width: 100%;            
             flex-direction: column;
+            justify-content: center;
         }
 
         &-list {
@@ -170,6 +190,17 @@
 
     .flat {
         width: 85vw;
+        margin: auto;
+
+        &-tag {
+            color: white;
+            display: flex;
+            gap: 10px;
+
+            & p {
+                padding: 10px 10px 10px 10px;         
+            }
+        }
         
 
         &-title {
@@ -193,16 +224,15 @@
 
     }
     
-    .profil-mini {
+    .profil {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
     }
 
-    .profil {
+    .profil-mini {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         
         & p {
@@ -219,6 +249,24 @@
 
     .fa-circle {
         font-size: 50px;
+    }
+
+    .chevron-left,
+    .chevron-right {
+        position: absolute;
+        top: 30%;
+        transform: translateY(+50%);
+        cursor: pointer;
+    }
+      
+    .fa-chevron-left {
+        right: 90px;
+        font-size: 60px
+    } 
+      
+    .fa-chevron-right {
+        left: 70px;
+        font-size: 60px;
     }
 
 }

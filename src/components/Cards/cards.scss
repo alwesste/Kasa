@@ -11,12 +11,13 @@
         width: 340px;
         border-radius: 10px;
         box-shadow: 0 0 10px 2px grey;
-
+        &:hover {   
+            cursor: pointer;
+            box-shadow:  0 0 20px 2px grey;;
+        }
     }
     
-    &:hover {   
-        cursor: pointer;
-     }
+   
     
     &-title {
         color: white;
@@ -35,12 +36,17 @@
     .card {
         width: 85vw;
         height: 255px;
-        margin-bottom: 5px;
-        margin-top: 5px;
+        margin-bottom: 100px;
+        margin-top: 45px;
+    
+        &-img {
+            width: 85vw;   
+            
+        }
 
         &-title {
             position: relative;
-            top: 200px;
+            bottom: 30px;
             text-decoration: none;
         }
     }

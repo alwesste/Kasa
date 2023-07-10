@@ -4,10 +4,8 @@
     height: 68px;
     justify-content: space-between;
     align-items: center;
-    gap: 720px;
     padding-bottom: 40px;
-    padding-top: 30px;
-    margin: auto;
+    margin: 30px 100px 0 100px;
 
     &-img {
         height: 50px;
@@ -36,6 +34,7 @@
         width: 85vw;
         gap: 0px;
         padding-bottom: 10px;
+        margin: auto;
 
         &-img {
             height: 30px;

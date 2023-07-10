@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import Layout from './components/Layout/layout';
 import Error from './components/Error/error';

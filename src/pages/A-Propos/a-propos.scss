@@ -21,7 +21,11 @@
 
 @media screen and (max-width: 750px) {
     .about {
-        margin: 25px;
+        margin: auto;
+
+        &-img {
+            margin: 0 30px 30px 30px;
+        }
         
     }
 }

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 
-function List( {label, content} ) {
+function List( {label, content, smallList} ) {
 
     const [rotate, setRotate] = useState(false)
     const [translate, setTranslate] = useState(false)
@@ -17,17 +17,17 @@ function List( {label, content} ) {
 
    
     return (
-        <div className={`listConteiner ${expandMargin ? 'expand-margin' : 'unexpand-margin'}`}>
-            <div className='list'>
+        <div className={`${expandMargin ? 'expand-margin' : 'unexpand-margin'} ${smallList ? 'smallList' : 'listConteiner' } `}>
+            
+            <div className= 'list'>
                 <i onClick={handleClick} className={`fa-solid fa-chevron-up ${rotate ? 'rotate-180' : 'rotate-0'}`}></i>
-                <p>
-                    {label}
-                </p> 
+                    {label} 
             </div>
+                
                 <p className={`list-paragraph ${translate ? 'translate-en-bas' : 'translate-en-haut' }`}>
                     {content}
                 </p> 
-        </div> 
+         </div> 
     )  
 }
 
