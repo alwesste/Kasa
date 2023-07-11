@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import data from '../../annonce.json' 
 import "./logement.scss"
 import List from '../../components/List/list';
 
 
 function Logement() {
+    const [photoIndex, setPhotoIndex] = useState(0);
 
     const {id} = useParams()
 
     const findObject = data.find((item) => item.id === id)    
+
+    if (!findObject) {
+        return <Navigate to = "/404" replace/>
+    }
     
-    const [photoIndex, setPhotoIndex] = useState(0);
     const pictures = findObject.pictures
     const numSlides = pictures.length;
     
@@ -37,16 +41,24 @@ function Logement() {
 
         <>
             <div className='logement'>
-                <div className="chevron-left">
-                    <i onClick = {testClicLeft} className="fa-solid fa-chevron-left"></i>
-                </div>
-                <img className='logement-img' src={pictures[photoIndex]} alt="salon avec une table, une commode et un canape" />
-                <div className="chevron-right">
-                    <i onClick = {testClicRight} className="fa-solid fa-chevron-right"></i>
-                </div>
-                <div className='logement-count'>
-                    {photoIndex + 1 } / {numSlides}
-                </div>
+            <img className='logement-img' src={pictures[photoIndex]} alt="salon avec une table, une commode et un canape" />
+
+                {numSlides > 1 && ( 
+                    <div>
+                        <div className="chevron-left">
+                        <i onClick = {testClicLeft} className="fa-solid fa-chevron-left"></i>
+                    </div>
+                
+               
+                    <div className="chevron-right">
+                        <i onClick = {testClicRight} className="fa-solid fa-chevron-right"></i>
+                    </div>
+                
+                    <div className='logement-count'>
+                        {photoIndex + 1 } / {numSlides}
+                    </div>
+                    </div>               
+                )}
             </div>
 
 
@@ -57,7 +69,7 @@ function Logement() {
                         <h1 className="flat-title">Coozy loft on the canal Saint-Martin</h1>
                         <p className='flat-location'>{findObject.location}</p>
                         <div className='flat-tag'>
-                            {tags.map((tag) => <p key={tag}>{tag}</p>)}                            <p>Canal</p>
+                            {tags.map((tag, index) => <p key={index}>{tag}</p>)}                            <p>Canal</p>
                         </div>
                     </div>
                     <div className='profil'>
@@ -76,8 +88,8 @@ function Logement() {
                     
                     <List label = "Description" smallList={"smallList"} content={findObject.description}/>
                     <List label = "Equipements" smallList={"smallList"} 
-                        content={equipmentsList.map((equipement) =>
-                            <li key={equipement}>{equipement}</li>
+                        content={equipmentsList.map((equipement, index) =>
+                            <li key={index}>{equipement}</li>
                     )}/> 
 
                 </div>

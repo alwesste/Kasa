@@ -7,7 +7,7 @@ const Cards = ({ title, cover, id }) => {
 
     return  (     
         <div> 
-            <Link to={`/logement/${id}`}>
+            <Link className="police-title" to={`/logement/${id}`}>
                 <div className="card">
                     <img className="card-img" src={cover} alt="interieur de maison" />
                     <p className="card-title">

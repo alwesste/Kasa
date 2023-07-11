@@ -1,24 +1,26 @@
 .logement {
-    width: 1440px;
+    max-width: 1240px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin: auto;
     position: relative;
+    margin: 0 100px 0 100px;
+
 
     &-img {
-        width: 1240px;
+        width: 100%;
         height: 415px;
-        margin: auto;
         object-fit: cover;    
         border-radius: 10px;
     }
 
     &-lists {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;       
-        width: 1240px;
+        max-width: 1240px;
         margin-bottom: 30px;
         list-style-type: none;
 
@@ -81,7 +83,7 @@
 }
 
 .flat {
-    width: 1240px;
+    max-width: 1240px;
     color: #FF6060;
     margin: 0 100px 0 100px;
 
@@ -103,6 +105,7 @@
     &-tag {
         color: white;
         display: flex;
+        flex-wrap: wrap;
         gap: 20px;
 
         & p {
@@ -165,12 +168,28 @@
     transition: transform 0.2s ;
 } 
 
+
+@media screen and (max-width: 1300px) {
+
+
+    .logement-lists {
+        justify-content: center;
+    }
+
+    .flat-mix {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
 @media screen and (max-width: 750px) {
     .logement {
-        width: 85vw;
+
    
         &-img {
             width: 85vw;
+            height: 255px;
         }
 
         &-lists {
@@ -196,6 +215,7 @@
             color: white;
             display: flex;
             gap: 10px;
+            justify-content: center;
 
             & p {
                 padding: 10px 10px 10px 10px;         
@@ -251,22 +271,18 @@
         font-size: 50px;
     }
 
-    .chevron-left,
-    .chevron-right {
-        position: absolute;
-        top: 30%;
-        transform: translateY(+50%);
-        cursor: pointer;
-    }
       
     .fa-chevron-left {
-        right: 90px;
+        right: 150px;
+        bottom: 40px;
         font-size: 60px
     } 
       
     .fa-chevron-right {
-        left: 70px;
+        left: 150px;
         font-size: 60px;
+        bottom: 40px;
+
     }
 
 }

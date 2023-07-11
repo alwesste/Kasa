@@ -8,18 +8,17 @@ import "./home.scss";
 
 function Home() {
 
-const listOLogement = data.slice(0, 6)
+const listOLogement = data.slice(14, 20)
 
   return (
     <div className="home">
-      <Banner src={bannerPhoto} title="Chez vous, partout et ailleurs"/>
-      <div className="home-support">
-
-        {listOLogement.map((logement) => 
-           <Cards title={logement.title} cover={logement.cover} id={logement.id} key={logement.id}/>
-        )}
-       
-      </div>
+    <Banner src={bannerPhoto} title="Chez vous, partout et ailleurs"/>
+        
+          <div className="home-support">
+          {listOLogement.map((logement) => 
+          <Cards title={logement.title} cover={logement.cover} id={logement.id} key={logement.id}/>
+          )}
+          </div>     
     </div>
   );
 }

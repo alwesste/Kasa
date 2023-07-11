@@ -9,6 +9,10 @@ import About from './pages/A-Propos/a-propos';
 import Logement from './pages/Fiche-Logements/logement'
 
 const GlobalStyle = createGlobalStyle`
+
+// *{
+//   border: 1px solid blue
+// }
   body {
     font-family: 'Montserrat', sans-serif;    
     font-weight: 500;

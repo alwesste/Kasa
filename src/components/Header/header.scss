@@ -1,18 +1,19 @@
 .header {
     display: flex;
-    width: 1240px;
+    max-width: 98vw;
     height: 68px;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 40px;
     margin: 30px 100px 0 100px;
+    max-width: 1240px;
 
     &-img {
         height: 50px;
     }
 
     &-nav {
-        width: 300px;
+        max-width: 300px;
 
         a {
             margin-left: 45px; 
@@ -32,7 +33,6 @@
 @media screen and (max-width: 750px) {
     .header {
         width: 85vw;
-        gap: 0px;
         padding-bottom: 10px;
         margin: auto;
 
@@ -43,10 +43,10 @@
         &-nav {
             display: flex;
             justify-content: space-between;
-            width: 230px;
 
             a {
                 font-size: 18px;
+                margin-left: 30px;
             }
         }
     }

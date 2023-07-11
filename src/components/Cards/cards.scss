@@ -31,24 +31,28 @@
     }
 }
 
-@media screen and (max-width: 750px) {
 
-    .card {
-        width: 85vw;
-        height: 255px;
-        margin-bottom: 100px;
-        margin-top: 45px;
+@media screen and (max-width: 900px) {
     
-        &-img {
-            width: 85vw;   
-            
-        }
+    .card {
+        width: 75vw;
+        margin: auto;
+        padding-top: 40px;
 
-        &-title {
-            position: relative;
-            bottom: 30px;
-            text-decoration: none;
+        &-img {
+            width: 75vw;
+            height: 90%;
         }
     }
-}
+}   
 
+@media screen and (max-width: 750px) {
+    .card{
+        width: 80vw;
+        
+        &-img {
+        width: 80vw;
+    }
+}
+    }
+    
