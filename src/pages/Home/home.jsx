@@ -8,7 +8,7 @@ import "./home.scss";
 
 function Home() {
 
-const listOLogement = data.slice(14, 20)
+const listOLogement = data.slice(-6)
 
   return (
     <div className="home">

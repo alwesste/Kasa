@@ -69,7 +69,7 @@ function Logement() {
                         <h1 className="flat-title">Coozy loft on the canal Saint-Martin</h1>
                         <p className='flat-location'>{findObject.location}</p>
                         <div className='flat-tag'>
-                            {tags.map((tag, index) => <p key={index}>{tag}</p>)}                            <p>Canal</p>
+                            {tags.map((tag, index) => <p key={index}>{tag}</p>)}                   
                         </div>
                     </div>
                     <div className='profil'>
@@ -85,12 +85,14 @@ function Logement() {
                 
 
                 <div className='logement-lists'>
+                        
+                    <div className='logement-lists-description'><List label = "Description" smallList={"smallList"} content={findObject.description}/></div>
+                    <div className='logement-lists-equipements'><List label = "Equipements" smallList={"smallList"} 
+                            content={equipmentsList.map((equipement, index) =>
+                                <li key={index}>{equipement}</li>
+                        )}/> 
+                    </div>
                     
-                    <List label = "Description" smallList={"smallList"} content={findObject.description}/>
-                    <List label = "Equipements" smallList={"smallList"} 
-                        content={equipmentsList.map((equipement, index) =>
-                            <li key={index}>{equipement}</li>
-                    )}/> 
 
                 </div>
             </div>

@@ -1,9 +1,7 @@
 import './list.scss'
 import React, { useState } from 'react';
 
-
-
-function List( {label, content, smallList} ) {
+function List( {label, content, smallList, onMarginChange } ) {
 
     const [rotate, setRotate] = useState(false)
     const [translate, setTranslate] = useState(false)
@@ -15,7 +13,7 @@ function List( {label, content, smallList} ) {
         setExpandMargin(!expandMargin)
     }   
 
-   
+
     return (
         <div className={`${expandMargin ? 'expand-margin' : 'unexpand-margin'} ${smallList ? 'smallList' : 'listConteiner' } `}>
             
@@ -24,9 +22,9 @@ function List( {label, content, smallList} ) {
                     {label} 
             </div>
                 
-                <p className={`list-paragraph ${translate ? 'translate-en-bas' : 'translate-en-haut' }`}>
-                    {content}
-                </p> 
+                <div className={`list-paragraph ${translate ? 'translate-en-bas' : 'translate-en-haut' }`}>
+                    <p>{content}</p>
+                </div> 
          </div> 
     )  
 }

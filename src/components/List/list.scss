@@ -9,7 +9,6 @@
     }
 
     &.unexpand-margin {
-        padding: auto;
         transition: padding 0.3s;
     }
 
@@ -35,15 +34,11 @@
             max-width: 960px;
             position: relative;
             z-index: 0;
-            padding: 20px;
+            padding: 10px;
             margin: 20px 100px 0 100px;
             text-align: justify;
-
         }
         
-        & p {
-            margin-left: 10px;
-        }
 
         & i {
             position: relative;
@@ -62,7 +57,9 @@
         }
     }
 
-    
+    .fa-chevron-up {
+        cursor: pointer;
+    }
 
     .translate-en-haut {
         transform: translateY(-500px);
@@ -84,12 +81,11 @@
     overflow: hidden;
 
     &.expand-margin {
-        padding-bottom: 100px; 
+        padding-bottom: 156px; 
         transition: padding-bottom 0.3s;
     }
 
     &.unexpand-margin {
-        padding: auto;
         transition: padding 0.3s;
     }
 
@@ -109,19 +105,16 @@
 
         &-paragraph {
             color: #FF6060;
-            height: fit-content;
-            max-width: 520px;
+            max-width: 540px;
             position: relative;
             z-index: 0;
-            padding: 20px;
+            padding: 10px;
             text-align: justify;
+
         }
 
         
-        & p {
-            margin-left: 10px;
-        }
-
+        
         & i {
             position: relative;
             left: 510px;
@@ -151,6 +144,10 @@
         transition: transform 0.3s;
         background-color: #F6F6F6
     }
+
+    .fa-chevron-up {
+        cursor: pointer;    
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -158,8 +155,7 @@
     .listConteiner{
         
         &.expand-margin {
-            padding-bottom: 150px; 
-            transition: padding-bottom 0.3s;
+            padding-bottom: 100px; 
         }
     
         
@@ -168,9 +164,9 @@
             margin: auto;
 
             &-paragraph {
-                width: 75%;
+                width: 80%;
                 margin: auto;
-                margin-top: 20px;
+                margin-top: 30px;
  
             }
 
@@ -183,16 +179,60 @@
     .smallList {
 
         &.expand-margin {
-            padding-bottom: 200px; 
-            transition: padding-bottom 0.3s;
+            padding-bottom: 190px; 
         }
 
         .list {
             max-width: 85vw;
 
             & i {
-                left: 90%;
+                left: 88%;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .listConteiner{
+        
+
+        .list-paragraph{
+            font-size: 14px;
+
+            &-paragraph {
+                width: 80%;
+            }
+        }
+    }
+
+    .smallList {
+
+        .list-paragraph{
+            font-size: 14px;
+        }
+
+        &.expand-margin {
+            padding-bottom: 140px; 
+            transition: padding-bottom 0.3s;
+        }
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .listConteiner{
+        
+        &.expand-margin {
+            padding-bottom: 120px; 
+        }
+    }   
+
+    .smallList {
+
+        &.expand-margin {
+            padding-bottom: 140px; 
+            transition: padding-bottom 0.3s;
         }
     }
 }
