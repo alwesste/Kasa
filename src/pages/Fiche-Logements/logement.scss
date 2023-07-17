@@ -81,7 +81,48 @@
         }
     }                  
 }
+// .smallList-equipements {
+//     .expand-margin {
+//     padding-bottom: var(--content-height);
+//     transition: padding-bottom 0.6s;
+//     background-color: grey;
+//     }
+// }
 
+// .smallList-description {
+//     .expand-margin {
+//     padding-bottom: var(--content-height);
+//     transition: padding-bottom 0.6s;
+//     background-color: green;
+//     }
+// }
+
+.logement-lists-description .expand-margin {
+    padding-bottom: 110px;
+    transition: padding-bottom 0.3s;
+    // background-color: green;
+  }
+  
+  .logement-lists-description .unexpand-margin {
+    padding-bottom: 0;
+    transition: padding-bottom 0.3s;
+    // background-color: green;
+  }
+  
+//   .logement-lists-equipements .expand-margin {
+//     padding-bottom: var(--content-height);
+//     transition: padding-bottom 0.6s;
+//     background-color: grey;
+//   }
+  
+//   .logement-lists-equipements .unexpand-margin {
+//     padding-bottom: 0;
+//     transition: padding-bottom 0.6s;
+//     background-color: gray;
+//   }
+  
+  /* Reste des styles... */
+  
 .flat {
     max-width: 1240px;
     color: #FF6060;
@@ -259,7 +300,7 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        gap: 15px;
+        gap: 65px;
         
         &-img {
             width: 80px;
@@ -302,4 +343,11 @@
 
     }
 
+}
+
+@media screen and (max-width: 450px) {
+
+    .profil {
+        gap: 10px;
+    }
 }

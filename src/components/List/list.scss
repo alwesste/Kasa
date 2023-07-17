@@ -8,10 +8,12 @@
         transition: padding-bottom 0.3s;
     }
 
+    
+
     &.unexpand-margin {
         transition: padding 0.3s;
+        margin-bottom:  0;
     }
-
 
     .list {
         background-color: #FF6060;
@@ -64,30 +66,44 @@
     .translate-en-haut {
         transform: translateY(-500px);
         transition: transform 0.3s;
-        
     }
 
     .translate-en-bas {
         transform: translateY(-30px);
         transition: transform 0.3s;
-        background-color: #F6F6F6
+        background-color: #F6F6F6;
     }
 }
+// .expand-margin {
+//     padding-bottom: calc(var(--content-height));
+//     transition: padding-bottom 0.3s;
+//     background-color: green;
+// }
 
-
+// .unexpand-margin {
+//     transition: padding 0.3s;
+//     padding-bottom:  0;
+//     background-color: blue;
+// }
 .smallList {  
     
     height:90px;
     overflow: hidden;
+   
 
     &.expand-margin {
-        padding-bottom: 156px; 
+        padding-bottom: 170px;
         transition: padding-bottom 0.3s;
+        // background-color: green;
     }
 
     &.unexpand-margin {
         transition: padding 0.3s;
+        margin-bottom:  0;
+        // background-color: blue;
     }
+
+    
 
     .list {
         background-color: #FF6060;
@@ -108,7 +124,7 @@
             max-width: 540px;
             position: relative;
             z-index: 0;
-            padding: 10px;
+            padding: 5px 5px 1px 10px;
             text-align: justify;
 
         }
@@ -178,9 +194,11 @@
 
     .smallList {
 
-        &.expand-margin {
-            padding-bottom: 190px; 
+        .list-paragraph{
+            font-size: 14px;
         }
+
+       
 
         .list {
             max-width: 85vw;
@@ -211,10 +229,7 @@
             font-size: 14px;
         }
 
-        &.expand-margin {
-            padding-bottom: 140px; 
-            transition: padding-bottom 0.3s;
-        }
+        
     }
 
 }
@@ -228,11 +243,4 @@
         }
     }   
 
-    .smallList {
-
-        &.expand-margin {
-            padding-bottom: 140px; 
-            transition: padding-bottom 0.3s;
-        }
-    }
 }

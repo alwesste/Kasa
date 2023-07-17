@@ -85,17 +85,22 @@ function Logement() {
                 
 
                 <div className='logement-lists'>
-                        
-                    <div className='logement-lists-description'><List label = "Description" smallList={"smallList"} content={findObject.description}/></div>
-                    <div className='logement-lists-equipements'><List label = "Equipements" smallList={"smallList"} 
-                            content={equipmentsList.map((equipement, index) =>
-                                <li key={index}>{equipement}</li>
-                        )}/> 
+                    <div className='logement-lists-description'>
+                        <List
+                        label='Description'
+                        smallList={'smallList-description'}
+                        content={findObject.description}
+                        />
                     </div>
-                    
-
+                    <div className='logement-lists-equipements'>
+                        <List
+                        label='Equipements'
+                        smallList={'smallList-equipements'}
+                        content={equipmentsList.map((equipement, index) => <li key={index}>{equipement}</li>)}
+                        />
+                    </div>
+                    </div>
                 </div>
-            </div>
         </>
     )
 }
