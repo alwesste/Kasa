@@ -1,28 +1,17 @@
 import './list.scss';
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 function List({ label, content, smallList }) {
   const [expanded, setExpanded] = useState(false);
 
-  const contentRef = useRef();
-
   const handleClick = () => {
     setExpanded(!expanded);  };
 
-  // useEffect(() => {
-  //   if (expanded && smallList) {
-  //     const contentHeight = contentRef.current.offsetHeight;
-  //     document.documentElement.style.setProperty('--content-height', `${contentHeight}px`);
-  //     console.log(contentHeight);
-  //   }
-  //   else {
-  //     document.documentElement.style.setProperty('--content-height', '0');
-  //   }
-  // }, [content, expanded, smallList]);
+
   
 
   return (
-    <div className={` ${smallList ? 'smallList' : 'listConteiner' } ${expanded ? 'expand-margin' : 'unexpand-margin'} `}>
+    <div className={` ${smallList ? 'smallList' : 'listConteiner' }`}>
       
       <div className="list">
 
@@ -31,7 +20,6 @@ function List({ label, content, smallList }) {
       </div>
 
       <div
-        ref={contentRef}
         className={`list-paragraph ${expanded ? 'translate-en-bas' : 'translate-en-haut'} ` }>
       
         <p>{content}</p>

@@ -1,19 +1,5 @@
 .listConteiner{
     overflow: hidden;
-    height:90px;
-
-
-    &.expand-margin {
-        padding-bottom: 80px; 
-        transition: padding-bottom 0.3s;
-    }
-
-    
-
-    &.unexpand-margin {
-        transition: padding 0.3s;
-        margin-bottom:  0;
-    }
 
     .list {
         background-color: #FF6060;
@@ -35,10 +21,12 @@
             height: fit-content;
             max-width: 960px;
             position: relative;
+            bottom: 30px;
             z-index: 0;
             padding: 10px;
             margin: 20px 100px 0 100px;
             text-align: justify;
+            overflow: hidden;
         }
         
 
@@ -64,46 +52,22 @@
     }
 
     .translate-en-haut {
-        transform: translateY(-500px);
-        transition: transform 0.3s;
+        max-height: 0; 
+        transition: max-height 0.5s;
     }
 
     .translate-en-bas {
-        transform: translateY(-30px);
-        transition: transform 0.3s;
+        max-height: 300px;
+        height: auto;
         background-color: #F6F6F6;
+        transition: max-height 0.5s;
     }
 }
-// .expand-margin {
-//     padding-bottom: calc(var(--content-height));
-//     transition: padding-bottom 0.3s;
-//     background-color: green;
-// }
 
-// .unexpand-margin {
-//     transition: padding 0.3s;
-//     padding-bottom:  0;
-//     background-color: blue;
-// }
 .smallList {  
     
-    height:90px;
-    overflow: hidden;
-   
+  overflow: hidden;
 
-    &.expand-margin {
-        padding-bottom: 170px;
-        transition: padding-bottom 0.3s;
-        // background-color: green;
-    }
-
-    &.unexpand-margin {
-        transition: padding 0.3s;
-        margin-bottom:  0;
-        // background-color: blue;
-    }
-
-    
 
     .list {
         background-color: #FF6060;
@@ -123,14 +87,13 @@
             color: #FF6060;
             max-width: 540px;
             position: relative;
+            bottom: 30px;
             z-index: 0;
             padding: 5px 5px 1px 10px;
             text-align: justify;
-
+            overflow: hidden;
         }
-
-        
-        
+ 
         & i {
             position: relative;
             left: 510px;
@@ -150,15 +113,15 @@
     }
    
     .translate-en-haut {
-        transform: translateY(-500px);
-        transition: transform 0.3s;
-        
+        max-height: 0; 
+        transition: max-height 0.5s; 
     }
 
     .translate-en-bas {
-        transform: translateY(-30px);
-        transition: transform 0.3s;
-        background-color: #F6F6F6
+        max-height: 300px;
+        height: auto;
+        background-color: #F6F6F6;
+        transition: max-height 0.5s;
     }
 
     .fa-chevron-up {
@@ -168,28 +131,20 @@
 
 @media screen and (max-width: 750px) {
 
-    .listConteiner{
-        
-        &.expand-margin {
-            padding-bottom: 100px; 
-        }
-    
-        
-        .list {
-            width: 85%;
+
+    .listConteiner .list {
+        width: 85%;
+        margin: auto;
+
+        &-paragraph {
+            width: 80%;
             margin: auto;
-
-            &-paragraph {
-                width: 80%;
-                margin: auto;
-                margin-top: 30px;
- 
-            }
-
-            & i {
-                left: 85%;
-            }
+            margin-top: 30px;
         }
+
+        & i {
+            left: 85%;
+        } 
     }
 
     .smallList {
@@ -197,8 +152,6 @@
         .list-paragraph{
             font-size: 14px;
         }
-
-       
 
         .list {
             max-width: 85vw;
@@ -213,7 +166,6 @@
 @media screen and (max-width: 620px) {
     .listConteiner{
         
-
         .list-paragraph{
             font-size: 14px;
 
@@ -227,20 +179,6 @@
 
         .list-paragraph{
             font-size: 14px;
-        }
-
-        
+        }       
     }
-
-}
-
-@media screen and (max-width: 450px) {
-
-    .listConteiner{
-        
-        &.expand-margin {
-            padding-bottom: 120px; 
-        }
-    }   
-
 }

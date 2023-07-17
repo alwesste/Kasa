@@ -88,14 +88,14 @@ function Logement() {
                     <div className='logement-lists-description'>
                         <List
                         label='Description'
-                        smallList={'smallList-description'}
+                        smallList={'smallList'}
                         content={findObject.description}
                         />
                     </div>
                     <div className='logement-lists-equipements'>
                         <List
                         label='Equipements'
-                        smallList={'smallList-equipements'}
+                        smallList={'smallList'}
                         content={equipmentsList.map((equipement, index) => <li key={index}>{equipement}</li>)}
                         />
                     </div>
